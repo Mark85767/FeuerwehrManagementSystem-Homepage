@@ -201,7 +201,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <nav class="navbar navbar-expand-lg container" aria-label="Hauptnavigation">
         <a class="navbar-brand d-flex align-items-center gap-2" href="#start">
             <img src="assets/fms-logo.png" alt="" width="42" height="42">
-            <span>Feuerwehr<span class="brand-light">ManagementSystem</span></span>
+            <span>FeuerwehrManagementSystem</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hauptmenue" aria-controls="hauptmenue" aria-expanded="false" aria-label="Menü öffnen">
             <i class="bi bi-list"></i>
@@ -261,12 +261,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p>Das FMS bündelt die tägliche Verwaltung Ihrer Feuerwehr in übersichtlichen Bereichen.</p>
         </div>
         <div class="row g-3">
-            <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon red"><i class="bi bi-people-fill"></i></span><h3>Mitglieder &amp; Rechte</h3><p>Stammdaten, Qualifikationen, Berechtigungen und Mitgliederportal im Zusammenhang verwalten.</p></article></div>
+            <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon red"><i class="bi bi-people-fill"></i></span><h3>Mitgliederverwaltung</h3><p>Stammdaten, Qualifikationen und Berechtigungen der Mannschaft übersichtlich verwalten.</p></article></div>
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon blue"><i class="bi bi-fire"></i></span><h3>Einsätze &amp; Berichte</h3><p>Einsätze dokumentieren, Anwesenheiten erfassen und Informationen strukturiert wiederfinden.</p></article></div>
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon green"><i class="bi bi-mortarboard-fill"></i></span><h3>Ausbildung &amp; Lehrgänge</h3><p>Ausbildungsstände und Lehrgänge im Blick behalten und nachvollziehbar planen.</p></article></div>
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon amber"><i class="bi bi-truck-front-fill"></i></span><h3>Fahrzeuge &amp; Geräte</h3><p>Fahrzeuge, Prüffristen und gemeldete Mängel übersichtlich organisieren.</p></article></div>
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon dark"><i class="bi bi-calendar-week-fill"></i></span><h3>Termine &amp; Dienste</h3><p>Dienstabende, Veranstaltungen und Beteiligung an einem Platz koordinieren.</p></article></div>
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon red"><i class="bi bi-bar-chart-fill"></i></span><h3>Auswertungen &amp; Berichte</h3><p>Wichtige Kennzahlen und Übersichten für die Arbeit Ihrer Feuerwehr zusammenstellen.</p></article></div>
+            <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon blue"><i class="bi bi-geo-alt-fill"></i></span><h3>Karte, Hydranten &amp; Objekte</h3><p>Hydrantenverzeichnis und relevante Objekte auf der Karte darstellen und schnell vor Ort finden.</p></article></div>
+            <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon amber"><i class="bi bi-cup-hot-fill"></i></span><h3>Getränke &amp; Abrechnung</h3><p>Getränkebestände organisieren und Ausgaben sowie Abrechnungen übersichtlich führen.</p></article></div>
+            <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon green"><i class="bi bi-phone-fill"></i></span><h3>Mitgliederportal</h3><p>Mitglieder können wichtige Informationen und persönliche Funktionen auch mobil selbst erreichen.</p></article></div>
         </div>
     </section>
 
@@ -323,7 +326,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <footer class="site-footer">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
         <a class="footer-brand" href="#start"><img src="assets/fms-logo.png" alt="" width="30" height="30"> FeuerwehrManagementSystem</a>
-        <span>Ein System für die Organisation des Feuerwehralltags.</span>
+        <span>© <?= date('Y') ?> FeuerwehrManagementSystem · Ein System für die Organisation des Feuerwehralltags.</span>
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
