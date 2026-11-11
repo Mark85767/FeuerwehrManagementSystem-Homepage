@@ -159,3 +159,15 @@ a { color: var(--fw-red); }
     .navbar-brand img { width: 34px; height: 34px; }
     .navbar-toggler { padding: .25rem; }
 }
+
+/* Historie / Zeitleiste */
+.timeline { position: relative; max-width: 760px; margin: 0 auto; padding: 0 0 0 4px; list-style: none; }
+.timeline::before { content: ""; position: absolute; top: 8px; bottom: 8px; left: 52px; width: 2px; background: #e1e5ea; }
+.timeline li { position: relative; display: flex; align-items: flex-start; gap: 34px; padding: 12px 0; }
+.timeline li::before { content: ""; position: absolute; top: 24px; left: 47px; width: 12px; height: 12px; border: 3px solid var(--fw-red); border-radius: 50%; background: #fff; }
+.timeline-year { flex: 0 0 40px; color: var(--fw-red); font-size: 1.05rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.9; }
+.timeline p { flex: 1; margin: 0 0 0 22px; padding: 14px 18px; border: 1px solid #eaedf0; border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); color: var(--fw-text); font-size: .92rem; line-height: 1.6; }
+@media (max-width: 575.98px) {
+    .timeline li { gap: 26px; }
+    .timeline p { margin-left: 18px; }
+}

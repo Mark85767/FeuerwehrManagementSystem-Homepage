@@ -210,6 +210,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
                 <a class="nav-link" href="#funktionen">Funktionen</a>
                 <a class="nav-link" href="#vorteile">Für die Feuerwehr</a>
+                <a class="nav-link" href="#historie">Historie</a>
                 <a class="btn btn-fw ms-lg-2" href="#zugang">Zugang anfragen</a>
                 <a class="btn btn-fw-outline ms-lg-2" href="<?= h(FMS_ANMELDE_URL) ?>">Anmelden</a>
             </div>
@@ -270,6 +271,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon blue"><i class="bi bi-geo-alt-fill"></i></span><h3>Karte, Hydranten &amp; Objekte</h3><p>Hydrantenverzeichnis und relevante Objekte auf der Karte darstellen und schnell vor Ort finden.</p></article></div>
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon amber"><i class="bi bi-cup-hot-fill"></i></span><h3>Getränke &amp; Abrechnung</h3><p>Getränkebestände organisieren und Ausgaben sowie Abrechnungen übersichtlich führen.</p></article></div>
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon green"><i class="bi bi-phone-fill"></i></span><h3>Mitgliederportal</h3><p>Mitglieder können wichtige Informationen und persönliche Funktionen auch mobil selbst erreichen.</p></article></div>
+            <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon red"><i class="bi bi-broadcast"></i></span><h3>Divera-24/7-Schnittstelle</h3><p>Anbindung an Divera 24/7 über die API – Alarmierungen, Termine und Rückmeldungen lassen sich mit dem FMS abgleichen.</p></article></div>
+            <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon blue"><i class="bi bi-cloud-arrow-up-fill"></i></span><h3>Push-API für Ihre Homepage</h3><p>Aktuelle Termine, Einsätze und Neuigkeiten per Push-Schnittstelle automatisch auf der Website Ihrer Feuerwehr veröffentlichen.</p></article></div>
+            <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon dark"><i class="bi bi-shield-lock-fill"></i></span><h3>Zwei-Faktor-Authentifizierung</h3><p>Zusätzlicher Schutz der Benutzerkonten durch 2FA – damit sensible Mitglieder- und Einsatzdaten sicher bleiben.</p></article></div>
         </div>
     </section>
 
@@ -287,6 +291,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div><span><i class="bi bi-check-lg"></i></span><p><strong>Einfacher Einstieg</strong><br>Fragen Sie unverbindlich einen Zugang für Ihre Feuerwehr an.</p></div>
             </div>
         </div>
+    </section>
+
+    <section class="section container" id="historie">
+        <div class="section-heading">
+            <span class="eyebrow">Historie</span>
+            <h2>Über 10 Jahre Erfahrung. <span>Aus der Praxis gewachsen.</span></h2>
+            <p>Seit über 10 Jahren managen wir Einheiten der Freiwilligen Feuerwehr – das FMS ist aus dieser Erfahrung entstanden.</p>
+        </div>
+        <ol class="timeline">
+            <li><span class="timeline-year">2014</span><p>Start mit einer Java-Anwendung zur Verwaltung von Einheiten der Freiwilligen Feuerwehr.</p></li>
+            <li><span class="timeline-year">2015</span><p>Erster Live-Einsatz im Feuerwehralltag.</p></li>
+            <li><span class="timeline-year">2017</span><p>Start der Implementierung der Divera-Schnittstelle und des Einsatzmonitors.</p></li>
+            <li><span class="timeline-year">2018</span><p>Einbindung der digitalen Getränkeabrechnung.</p></li>
+            <li><span class="timeline-year">2026</span><p>Transfer aller Funktionen in eine Webanwendung.</p></li>
+        </ol>
     </section>
 
     <section class="section request-section" id="zugang">
