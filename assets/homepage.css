@@ -185,3 +185,61 @@ a { color: var(--fw-red); }
     .timeline-year { align-self: flex-start; }
     .timeline p { margin-left: 26px; width: auto; }
 }
+
+/* Spenden & Kosten */
+.donate-section { padding-top: 0; padding-bottom: 40px; }
+.donate-card { display: flex; align-items: flex-start; gap: 22px; padding: 30px; border: 1px solid #eaedf0; border-left: 5px solid var(--fw-red); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); }
+.donate-card h2 { margin: 8px 0 10px; color: var(--fw-dark); font-size: clamp(1.4rem,3vw,1.9rem); font-weight: 800; letter-spacing: -.03em; }
+.donate-card h2 span { color: var(--fw-red); }
+.donate-card p { margin: 0; color: #707983; }
+.donate-icon { display: grid; flex: 0 0 52px; width: 52px; height: 52px; place-items: center; border-radius: 14px; background: #fdecec; color: var(--fw-red); font-size: 1.4rem; }
+@media (max-width: 575.98px) { .donate-card { flex-direction: column; padding: 22px; } }
+
+/* Dark Mode */
+.theme-toggle { padding: 8px 12px; border: 1px solid #d9dde2; background: transparent; color: var(--fw-dark); }
+.theme-toggle:hover { border-color: var(--fw-red); color: var(--fw-red); }
+@media (max-width: 991.98px) { .theme-toggle { align-self: flex-start; margin-top: 8px; } }
+
+[data-bs-theme="dark"] {
+    --fw-ground: #14171a;
+    --fw-text: #d5d9de;
+    --fw-dark: #f1f3f5;
+    --fw-blue: #8fb1e8;
+    --shadow: 0 2px 12px rgba(0,0,0,.35);
+    --shadow-strong: 0 8px 26px rgba(0,0,0,.5);
+    color-scheme: dark;
+}
+[data-bs-theme="dark"] a { color: #ff6b6b; }
+[data-bs-theme="dark"] .btn-fw, [data-bs-theme="dark"] a.btn-fw { color: #fff; }
+[data-bs-theme="dark"] .btn-fw-outline, [data-bs-theme="dark"] a.btn-fw-outline { color: #ff6b6b; }
+[data-bs-theme="dark"] .btn-fw-outline:hover, [data-bs-theme="dark"] a.btn-fw-outline:hover { color: #fff; }
+[data-bs-theme="dark"] .site-header { background: rgba(26,29,33,.96); border-bottom-color: rgba(255,255,255,.08); }
+[data-bs-theme="dark"] .navbar-nav .nav-link { color: #c3c9d0; }
+[data-bs-theme="dark"] .navbar-nav .nav-link:hover { color: #ff6b6b; }
+[data-bs-theme="dark"] .navbar-toggler { color: var(--fw-dark); }
+[data-bs-theme="dark"] .theme-toggle { border-color: #444b53; color: #f1f3f5; }
+[data-bs-theme="dark"] .hero { background: linear-gradient(115deg,#1a1d21 0%,#1a1d21 57%,#2a1a1c 100%); }
+[data-bs-theme="dark"] .hero-lead, [data-bs-theme="dark"] .hero-note, [data-bs-theme="dark"] .section-heading p,
+[data-bs-theme="dark"] .benefits p, [data-bs-theme="dark"] .request-copy > p, [data-bs-theme="dark"] .request-promise,
+[data-bs-theme="dark"] .donate-card p, [data-bs-theme="dark"] .feature-card p { color: #a4acb4; }
+[data-bs-theme="dark"] .hero-bottom { border-top-color: #2d3238; color: #a4acb4; }
+[data-bs-theme="dark"] .visual-main { border-color: rgba(255,255,255,.08); background: rgba(34,38,43,.96); }
+[data-bs-theme="dark"] .visual-mark, [data-bs-theme="dark"] .feature-icon.red, [data-bs-theme="dark"] .benefit-list > div > span, [data-bs-theme="dark"] .donate-icon { background: #3a1f21; }
+[data-bs-theme="dark"] .visual-stats > div { background: #2a2e33; }
+[data-bs-theme="dark"] .visual-stats b { color: #e1e5e9; }
+[data-bs-theme="dark"] .visual-progress { background: #30353b; }
+[data-bs-theme="dark"] .visual-badge { background: #2d3238; }
+[data-bs-theme="dark"] .feature-card, [data-bs-theme="dark"] .benefit-list > div, [data-bs-theme="dark"] .request-card,
+[data-bs-theme="dark"] .timeline p, [data-bs-theme="dark"] .donate-card { border-color: #2d3238; background: #1f2327; }
+[data-bs-theme="dark"] .donate-card { border-left-color: var(--fw-red); }
+[data-bs-theme="dark"] .feature-icon.blue { background: #1f2c44; }
+[data-bs-theme="dark"] .feature-icon.green { background: #1c3324; color: #5fd07f; }
+[data-bs-theme="dark"] .feature-icon.amber { background: #3a2d12; color: #f0b44c; }
+[data-bs-theme="dark"] .feature-icon.dark { background: #2d3238; color: #e1e5e9; }
+[data-bs-theme="dark"] .benefits { background: #1a1d21; }
+[data-bs-theme="dark"] .form-control { border-color: #3a4047; background: #14171a; color: #e1e5e9; }
+[data-bs-theme="dark"] .form-label { color: #c3c9d0; }
+[data-bs-theme="dark"] .form-check-label, [data-bs-theme="dark"] .request-card .form-text { color: #a4acb4; }
+[data-bs-theme="dark"] .timeline li::after { background: #1a1d21; }
+[data-bs-theme="dark"] .timeline li::before { background: #444b53; }
+[data-bs-theme="dark"] .site-footer { border-top-color: #2d3238; background: #1a1d21; color: #a4acb4; }

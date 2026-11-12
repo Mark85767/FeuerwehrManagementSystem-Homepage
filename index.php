@@ -195,6 +195,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" rel="stylesheet">
     <link href="assets/homepage.css" rel="stylesheet">
+    <script src="assets/theme.js"></script>
 </head>
 <body>
 <header class="site-header">
@@ -213,6 +214,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a class="nav-link" href="#historie">Historie</a>
                 <a class="btn btn-fw ms-lg-2" href="#zugang">Zugang anfragen</a>
                 <a class="btn btn-fw-outline ms-lg-2" href="<?= h(FMS_ANMELDE_URL) ?>">Anmelden</a>
+                <button class="btn theme-toggle ms-lg-1" type="button" id="themeToggle" aria-label="Zwischen hellem und dunklem Layout wechseln" title="Layout wechseln"><i class="bi bi-moon-stars-fill"></i></button>
             </div>
         </div>
     </nav>
@@ -271,9 +273,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon blue"><i class="bi bi-geo-alt-fill"></i></span><h3>Karte, Hydranten &amp; Objekte</h3><p>Hydrantenverzeichnis und relevante Objekte auf der Karte darstellen und schnell vor Ort finden.</p></article></div>
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon amber"><i class="bi bi-cup-hot-fill"></i></span><h3>Getränke &amp; Abrechnung</h3><p>Getränkebestände organisieren und Ausgaben sowie Abrechnungen übersichtlich führen.</p></article></div>
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon green"><i class="bi bi-phone-fill"></i></span><h3>Mitgliederportal</h3><p>Mitglieder können wichtige Informationen und persönliche Funktionen auch mobil selbst erreichen.</p></article></div>
-            <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon red"><i class="bi bi-broadcast"></i></span><h3>Divera-24/7-Schnittstelle</h3><p>Anbindung an Divera 24/7 über die API – Alarmierungen, Termine und Rückmeldungen lassen sich mit dem FMS abgleichen.</p></article></div>
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon blue"><i class="bi bi-cloud-arrow-up-fill"></i></span><h3>Push-API für Ihre Homepage</h3><p>Aktuelle Termine, Einsätze und Neuigkeiten per Push-Schnittstelle automatisch auf der Website Ihrer Feuerwehr veröffentlichen.</p></article></div>
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon dark"><i class="bi bi-shield-lock-fill"></i></span><h3>Zwei-Faktor-Authentifizierung</h3><p>Zusätzlicher Schutz der Benutzerkonten durch 2FA – damit sensible Mitglieder- und Einsatzdaten sicher bleiben.</p></article></div>
+            <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon amber"><i class="bi bi-puzzle-fill"></i></span><h3>Kundenspezifische Implementierungen</h3><p>Individuelle Lösungen, zum Beispiel für die Anwesenheitsdokumentation, sind auf Anfrage möglich.</p></article></div>
         </div>
     </section>
 
@@ -306,6 +308,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <li><span class="timeline-year">2018</span><p>Einbindung der digitalen Getränkeabrechnung.</p></li>
             <li><span class="timeline-year">2026</span><p>Transfer aller Funktionen in eine Webanwendung.</p></li>
         </ol>
+    </section>
+
+    <section class="section container donate-section" id="spenden">
+        <div class="donate-card">
+            <span class="donate-icon"><i class="bi bi-heart-fill"></i></span>
+            <div>
+                <span class="eyebrow">Spenden &amp; Kosten</span>
+                <h2>Möglichst kostenlos. <span>Mit Ihrer Unterstützung.</span></h2>
+                <p>Wir möchten versuchen, das Feuerwehr Management System weitestgehend kostenlos anzubieten. Allerdings sind wir auf Spenden angewiesen, um den Betrieb des Servers sicherzustellen. Wir würden uns freuen, wenn Ihr uns bei diesem Vorhaben unterstützt.</p>
+            </div>
+        </div>
     </section>
 
     <section class="section request-section" id="zugang">
@@ -349,5 +362,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="assets/menu.js"></script>
 </body>
 </html>
