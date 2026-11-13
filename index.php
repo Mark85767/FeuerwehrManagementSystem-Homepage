@@ -8,6 +8,8 @@ if (is_file(__DIR__ . '/config.local.php')) {
 defined('FMS_ZUGANGSANFRAGE_API_URL') || define('FMS_ZUGANGSANFRAGE_API_URL', '');
 defined('FMS_ZUGANGSANFRAGE_SCHLUESSEL') || define('FMS_ZUGANGSANFRAGE_SCHLUESSEL', '');
 defined('FMS_ANMELDE_URL') || define('FMS_ANMELDE_URL', 'https://app.feuerwehrmanagementsystem.de/login.php');
+defined('FMS_MITGLIEDERPOTAL_URL') || define('FMS_MITGLIEDERPOTAL_URL', 'https://portal.feuerwehrmanagementsystem.de/login.php');
+
 
 $sicher = !empty($_SERVER['HTTPS']) && strtolower((string)$_SERVER['HTTPS']) !== 'off';
 session_name('FMS_HOMEPAGE');
@@ -213,6 +215,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a class="nav-link" href="#vorteile">Für die Feuerwehr</a>
                 <a class="nav-link" href="#historie">Historie</a>
                 <a class="btn btn-fw ms-lg-2" href="#zugang">Zugang anfragen</a>
+                <a class="btn btn-fw-outline ms-lg-2" href="<?= h(FMS_MITGLIEDERPOTAL_URL) ?>">Mitgliederportal</a>
                 <a class="btn btn-fw-outline ms-lg-2" href="<?= h(FMS_ANMELDE_URL) ?>">Anmelden</a>
                 <button class="btn theme-toggle ms-lg-1" type="button" id="themeToggle" aria-label="Zwischen hellem und dunklem Layout wechseln" title="Layout wechseln"><i class="bi bi-moon-stars-fill"></i></button>
             </div>
@@ -327,7 +330,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <span class="eyebrow">Der nächste Schritt</span>
                 <h2>Interesse am FMS?<br><span>Sprechen wir darüber.</span></h2>
                 <p>Senden Sie uns die wichtigsten Angaben zu Ihrer Feuerwehr. Die Anfrage wird direkt an das Betreiberportal übermittelt – Sie erhalten anschließend eine persönliche Rückmeldung.</p>
-                <div class="request-promise"><i class="bi bi-lock-fill"></i><span>Ihre Angaben werden ausschließlich zur Bearbeitung Ihrer Zugangsanfrage an das FeuerwehrManagementSystem übermittelt. Zur Missbrauchsabwehr wird dort außerdem eine pseudonymisierte Prüfsumme Ihrer IP-Adresse gespeichert.</span></div>
+                <div class="request-promise"><i class="bi bi-lock-fill"></i><span>Ihre Angaben werden ausschließlich zur Bearbeitung Ihrer Zugangsanfrage an das FeuerwehrManagementSystem übermittelt. Zur Missbrauchsabwehr wird dort außerdem eine pseudonymisierte Prüfsumme Ihrer IP-Adresse gespeichert. Mehr dazu in der <a href="datenschutz.php">Datenschutzerklärung</a>.</span></div>
             </div>
             <div class="request-card">
                 <?php if ($erfolg): ?>
@@ -346,7 +349,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="col-sm-6"><label class="form-label" for="email">E-Mail-Adresse *</label><input class="form-control" id="email" name="email" type="email" required maxlength="254" autocomplete="email" value="<?= h($formular['email']) ?>"></div>
                         <div class="col-12"><label class="form-label" for="telefon">Telefon <span class="text-secondary">(optional)</span></label><input class="form-control" id="telefon" name="telefon" type="tel" maxlength="50" autocomplete="tel" value="<?= h($formular['telefon']) ?>"></div>
                         <div class="col-12"><label class="form-label" for="nachricht">Ihre Nachricht <span class="text-secondary">(optional)</span></label><textarea class="form-control" id="nachricht" name="nachricht" rows="3" maxlength="2000" placeholder="Was möchten Sie über das FMS erfahren?"><?= h($formular['nachricht']) ?></textarea></div>
-                        <div class="col-12"><div class="form-check"><input class="form-check-input" id="datenschutz" name="datenschutz" type="checkbox" value="1" required><label class="form-check-label" for="datenschutz">Ich bin einverstanden, dass meine Angaben und eine pseudonymisierte IP-Prüfsumme zur Bearbeitung und Missbrauchsabwehr an das FeuerwehrManagementSystem übermittelt und dort gespeichert werden. *</label></div></div>
+                        <div class="col-12"><div class="form-check"><input class="form-check-input" id="datenschutz" name="datenschutz" type="checkbox" value="1" required><label class="form-check-label" for="datenschutz">Ich bin einverstanden, dass meine Angaben und eine pseudonymisierte IP-Prüfsumme zur Bearbeitung und Missbrauchsabwehr an das FeuerwehrManagementSystem übermittelt und dort gespeichert werden. Die <a href="datenschutz.php" target="_blank">Datenschutzerklärung</a> habe ich zur Kenntnis genommen. *</label></div></div>
                         <div class="col-12"><button class="btn btn-fw btn-lg w-100" type="submit">Zugang unverbindlich anfragen <i class="bi bi-arrow-right"></i></button><small class="form-text d-block mt-2">* Pflichtangaben</small></div>
                     </div>
                 </form>
@@ -358,7 +361,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <footer class="site-footer">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
         <a class="footer-brand" href="#start"><img src="assets/fms-logo.png" alt="" width="30" height="30"> FeuerwehrManagementSystem</a>
-        <span>© <?= date('Y') ?> FeuerwehrManagementSystem · Ein System für die Organisation des Feuerwehralltags.</span>
+        <span>© <?= date('Y') ?> FeuerwehrManagementSystem · Ein System für die Organisation des Feuerwehralltags. · <a href="datenschutz.php">Datenschutz</a></span>
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -243,3 +243,11 @@ a { color: var(--fw-red); }
 [data-bs-theme="dark"] .timeline li::after { background: #1a1d21; }
 [data-bs-theme="dark"] .timeline li::before { background: #444b53; }
 [data-bs-theme="dark"] .site-footer { border-top-color: #2d3238; background: #1a1d21; color: #a4acb4; }
+
+/* Rechtliche Seiten (Datenschutz) */
+.legal { padding-top: 60px; padding-bottom: 70px; }
+.legal-body { max-width: 820px; margin: 0 auto; }
+.legal-body h1 { margin: 10px 0 6px; font-size: clamp(1.9rem,3.8vw,2.6rem); font-weight: 800; letter-spacing: -.04em; }
+.legal-body h2 { margin: 2rem 0 .6rem; font-size: 1.25rem; font-weight: 700; }
+.legal-body a:not(.btn) { color: var(--fw-red); }
+.site-footer a:not(.footer-brand) { color: inherit; text-decoration: underline; }
