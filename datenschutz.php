@@ -11,6 +11,7 @@ defined('FMS_BETREIBER_ANSCHRIFT') || define('FMS_BETREIBER_ANSCHRIFT', '[Straß
 defined('FMS_BETREIBER_EMAIL') || define('FMS_BETREIBER_EMAIL', '[E-Mail-Adresse bitte ergänzen]');
 defined('FMS_HOSTER') || define('FMS_HOSTER', '[Hosting-Anbieter, Standort Deutschland bitte ergänzen]');
 defined('FMS_ANMELDE_URL') || define('FMS_ANMELDE_URL', 'https://app.feuerwehrmanagementsystem.de/login.php');
+defined('FMS_MITGLIEDERPOTAL_URL') || define('FMS_MITGLIEDERPOTAL_URL', 'https://portal.feuerwehrmanagementsystem.de/');
 
 header('X-Content-Type-Options: nosniff');
 header('Referrer-Policy: strict-origin-when-cross-origin');
@@ -49,6 +50,7 @@ function h(string $wert): string
             <div class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
                 <a class="nav-link" href="index.php#funktionen">Funktionen</a>
                 <a class="btn btn-fw ms-lg-2" href="index.php#zugang">Zugang anfragen</a>
+                <a class="btn btn-fw-outline ms-lg-2" href="<?= h(FMS_MITGLIEDERPOTAL_URL) ?>">Mitgliederportal</a>
                 <a class="btn btn-fw-outline ms-lg-2" href="<?= h(FMS_ANMELDE_URL) ?>">Anmelden</a>
                 <button class="btn theme-toggle ms-lg-1" type="button" id="themeToggle" aria-label="Zwischen hellem und dunklem Layout wechseln" title="Layout wechseln"><i class="bi bi-moon-stars-fill"></i></button>
             </div>

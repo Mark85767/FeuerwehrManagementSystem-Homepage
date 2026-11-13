@@ -8,7 +8,7 @@ if (is_file(__DIR__ . '/config.local.php')) {
 defined('FMS_ZUGANGSANFRAGE_API_URL') || define('FMS_ZUGANGSANFRAGE_API_URL', '');
 defined('FMS_ZUGANGSANFRAGE_SCHLUESSEL') || define('FMS_ZUGANGSANFRAGE_SCHLUESSEL', '');
 defined('FMS_ANMELDE_URL') || define('FMS_ANMELDE_URL', 'https://app.feuerwehrmanagementsystem.de/login.php');
-defined('FMS_MITGLIEDERPOTAL_URL') || define('FMS_MITGLIEDERPOTAL_URL', 'https://portal.feuerwehrmanagementsystem.de/login.php');
+defined('FMS_MITGLIEDERPOTAL_URL') || define('FMS_MITGLIEDERPOTAL_URL', 'https://portal.feuerwehrmanagementsystem.de/');
 
 
 $sicher = !empty($_SERVER['HTTPS']) && strtolower((string)$_SERVER['HTTPS']) !== 'off';
