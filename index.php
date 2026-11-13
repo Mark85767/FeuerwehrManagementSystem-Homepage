@@ -361,7 +361,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <footer class="site-footer">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
         <a class="footer-brand" href="#start"><img src="assets/fms-logo.png" alt="" width="30" height="30"> FeuerwehrManagementSystem</a>
-        <span>© <?= date('Y') ?> FeuerwehrManagementSystem · Ein System für die Organisation des Feuerwehralltags. · <a href="datenschutz.php">Datenschutz</a></span>
+        <span>© <?= date('Y') ?> FeuerwehrManagementSystem · Ein System für die Organisation des Feuerwehralltags. · <a href="impressum.php">Impressum</a> · <a href="datenschutz.php">Datenschutz</a></span>
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

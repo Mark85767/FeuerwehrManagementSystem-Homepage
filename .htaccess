@@ -1,0 +1,40 @@
+# Saubere URLs ohne ".php" (Apache mit mod_rewrite und AllowOverride FileInfo)
+
+DirectoryIndex index.php
+Options -Indexes
+
+# Lokale Konfiguration mit Schlüsseln niemals ausliefern
+<FilesMatch "^config\.local(\.beispiel)?\.php$">
+    Require all denied
+</FilesMatch>
+
+# Dokumentation (README.md, CLAUDE.md, ...) nicht ausliefern
+<FilesMatch "\.md$">
+    Require all denied
+</FilesMatch>
+
+# Versteckte Dateien und Ordner (.git, .gitignore, .htaccess ...) sperren
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule (^|/)\.(?!well-known/) - [F,L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. Aufrufe mit ".php" per 301 auf die URL ohne Endung umleiten.
+    #    THE_REQUEST verhindert Schleifen durch das interne Rewrite unten;
+    #    nur GET/HEAD, damit POST-Daten des Formulars nicht verloren gehen.
+    RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
+    RewriteCond %{THE_REQUEST} \s/+(.*?)\.php[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,L,NE]
+
+    # 2. Startseite: /index -> /
+    RewriteRule ^index$ / [R=301,L]
+
+    # 3. URL ohne Endung intern auf die passende .php-Datei abbilden.
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.+?)/?$ $1.php [L]
+</IfModule>

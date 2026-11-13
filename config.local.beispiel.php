@@ -3,7 +3,8 @@
 define('FMS_ZUGANGSANFRAGE_API_URL', 'https://app.feuerwehrmanagementsystem.de/zugangsanfrage_api.php');
 define('FMS_ZUGANGSANFRAGE_SCHLUESSEL', '');
 
-// Angaben für die Datenschutzerklärung (datenschutz.php)
+// Angaben für Impressum (impressum.php) und Datenschutzerklärung (datenschutz.php)
+// Optional: define('FMS_BETREIBER_TELEFON', '+49 ...');
 define('FMS_BETREIBER_NAME', 'Vor- und Nachname bzw. Name des Vereins');
 define('FMS_BETREIBER_ANSCHRIFT', 'Musterstraße 1, 12345 Musterstadt');
 define('FMS_BETREIBER_EMAIL', 'datenschutz@example.de');
