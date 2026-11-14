@@ -23,6 +23,7 @@ session_set_cookie_params([
 ]);
 session_start();
 
+header('Content-Type: text/html; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
 header('Referrer-Policy: strict-origin-when-cross-origin');
 header('X-Frame-Options: DENY');
@@ -30,6 +31,10 @@ header("Content-Security-Policy: default-src 'self'; style-src 'self' https://cd
 
 function h(string $wert): string
 {
+    // Konfigurationswerte, die versehentlich als Windows-1252/ISO-8859-1 gespeichert wurden, nach UTF-8 wandeln
+    if (!mb_check_encoding($wert, 'UTF-8')) {
+        $wert = mb_convert_encoding($wert, 'UTF-8', 'Windows-1252');
+    }
     return htmlspecialchars($wert, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
 

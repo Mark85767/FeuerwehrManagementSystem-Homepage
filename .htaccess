@@ -3,6 +3,9 @@
 DirectoryIndex index.php
 Options -Indexes
 
+# Zeichensatz fest auf UTF-8 (Umlaute)
+AddDefaultCharset UTF-8
+
 # Lokale Konfiguration mit Schlüsseln niemals ausliefern
 <FilesMatch "^config\.local(\.beispiel)?\.php$">
     Require all denied
