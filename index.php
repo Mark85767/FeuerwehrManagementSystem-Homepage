@@ -9,6 +9,7 @@ defined('FMS_ZUGANGSANFRAGE_API_URL') || define('FMS_ZUGANGSANFRAGE_API_URL', ''
 defined('FMS_ZUGANGSANFRAGE_SCHLUESSEL') || define('FMS_ZUGANGSANFRAGE_SCHLUESSEL', '');
 defined('FMS_ANMELDE_URL') || define('FMS_ANMELDE_URL', 'https://app.feuerwehrmanagementsystem.de/login.php');
 defined('FMS_MITGLIEDERPOTAL_URL') || define('FMS_MITGLIEDERPOTAL_URL', 'https://portal.feuerwehrmanagementsystem.de/');
+defined('FMS_HOMEPAGE_URL') || define('FMS_HOMEPAGE_URL', 'https://feuerwehrmanagementsystem.de');
 
 
 $sicher = !empty($_SERVER['HTTPS']) && strtolower((string)$_SERVER['HTTPS']) !== 'off';
@@ -185,6 +186,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION['csrf'] = bin2hex(random_bytes(32));
     $csrf = $_SESSION['csrf'];
 }
+$seiteUrl = rtrim((string)FMS_HOMEPAGE_URL, '/');
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -193,7 +195,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Das FeuerwehrManagementSystem unterstützt Feuerwehren bei Mitgliederverwaltung, Einsätzen, Ausbildung und Organisation.">
     <title>FeuerwehrManagementSystem – Verwaltung, die zusammenarbeitet</title>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#c8102e">
+    <link rel="canonical" href="<?= h($seiteUrl) ?>/">
     <link rel="icon" href="assets/fms-logo.png">
+    <link rel="apple-touch-icon" href="assets/fms-logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="FeuerwehrManagementSystem">
+    <meta property="og:title" content="FeuerwehrManagementSystem – Verwaltung, die zusammenarbeitet">
+    <meta property="og:description" content="Mitgliederverwaltung, Einsätze, Ausbildung, Fahrzeuge und Termine für Feuerwehren – an einem Ort.">
+    <meta property="og:url" content="<?= h($seiteUrl) ?>/">
+    <meta property="og:image" content="<?= h($seiteUrl) ?>/assets/fms-logo.png">
+    <meta name="twitter:card" content="summary">
+    <script type="application/ld+json"><?= json_encode([
+        '@context' => 'https://schema.org',
+        '@graph' => [
+            ['@type' => 'WebSite', 'name' => 'FeuerwehrManagementSystem', 'url' => $seiteUrl . '/', 'inLanguage' => 'de'],
+            ['@type' => 'SoftwareApplication', 'name' => 'FeuerwehrManagementSystem', 'applicationCategory' => 'BusinessApplication', 'operatingSystem' => 'Web', 'url' => $seiteUrl . '/', 'logo' => $seiteUrl . '/assets/fms-logo.png', 'description' => 'Software für Feuerwehren: Mitgliederverwaltung, Einsätze, Ausbildung, Fahrzeuge, Termine und Mitgliederportal.'],
+        ],
+    ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP) ?></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" rel="stylesheet">
     <link href="assets/homepage.css" rel="stylesheet">
@@ -203,7 +224,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <header class="site-header">
     <nav class="navbar navbar-expand-lg container" aria-label="Hauptnavigation">
         <a class="navbar-brand d-flex align-items-center gap-2" href="#start">
-            <img src="assets/fms-logo.png" alt="" width="42" height="42">
+            <img src="assets/fms-logo.png" alt="FeuerwehrManagementSystem Logo" width="42" height="42">
             <span>FeuerwehrManagementSystem</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hauptmenue" aria-controls="hauptmenue" aria-expanded="false" aria-label="Menü öffnen">
