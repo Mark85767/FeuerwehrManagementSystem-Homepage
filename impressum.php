@@ -12,6 +12,7 @@ defined('FMS_BETREIBER_EMAIL') || define('FMS_BETREIBER_EMAIL', '[E-Mail-Adresse
 defined('FMS_BETREIBER_TELEFON') || define('FMS_BETREIBER_TELEFON', '');
 defined('FMS_ANMELDE_URL') || define('FMS_ANMELDE_URL', 'https://app.feuerwehrmanagementsystem.de/login.php');
 defined('FMS_MITGLIEDERPOTAL_URL') || define('FMS_MITGLIEDERPOTAL_URL', 'https://portal.feuerwehrmanagementsystem.de/');
+defined('FMS_HOMEPAGE_URL') || define('FMS_HOMEPAGE_URL', 'https://feuerwehrmanagementsystem.de');
 
 header('X-Content-Type-Options: nosniff');
 header('Referrer-Policy: strict-origin-when-cross-origin');
@@ -29,6 +30,7 @@ function h(string $wert): string
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="<?= h(rtrim((string)FMS_HOMEPAGE_URL, '/')) ?>/impressum">
     <title>Impressum – FeuerwehrManagementSystem</title>
     <link rel="icon" href="assets/fms-logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" rel="stylesheet">
