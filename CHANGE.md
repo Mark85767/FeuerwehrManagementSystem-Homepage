@@ -8,6 +8,7 @@ Alle nennenswerten Änderungen an der Homepage werden hier festgehalten. Neueste
 - Umlaute (z. B. im Ort der Betreiberanschrift) wurden teils falsch dargestellt: UTF-8 wird jetzt per `Content-Type`-Header und `AddDefaultCharset` erzwungen; `h()` wandelt Werte in Windows-1252 nach UTF-8.
 
 ### Hinzugefügt
+- Funktionskarte „Single Sign-On für eigene Apps“ (Anbindung eigener Apps, Anmeldung zentral über das Mitgliederportal) auf der Startseite.
 - Suchmaschinenoptimierung (#11): `robots.txt` und `sitemap.xml` (dynamisch über `robots.php`/`sitemap.php`), Canonical-Links, Open-Graph-/Twitter-Metadaten, JSON-LD (WebSite, SoftwareApplication), `theme-color`, Apple-Touch-Icon und Logo-Alt-Text. Neue optionale Konstante `FMS_HOMEPAGE_URL`.
 - Impressum (`impressum.php`) mit Betreiberangaben aus der `config.local.php`; Footer-Links auf Startseite und Datenschutzseite.
 - Optionale Konstante `FMS_BETREIBER_TELEFON` für das Impressum.
