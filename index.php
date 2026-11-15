@@ -217,7 +217,7 @@ $seiteUrl = rtrim((string)FMS_HOMEPAGE_URL, '/');
         '@context' => 'https://schema.org',
         '@graph' => [
             ['@type' => 'WebSite', 'name' => 'FeuerwehrManagementSystem', 'url' => $seiteUrl . '/', 'inLanguage' => 'de'],
-            ['@type' => 'SoftwareApplication', 'name' => 'FeuerwehrManagementSystem', 'applicationCategory' => 'BusinessApplication', 'operatingSystem' => 'Web', 'url' => $seiteUrl . '/', 'logo' => $seiteUrl . '/assets/fms-logo.png', 'description' => 'Software für Feuerwehren: Mitgliederverwaltung, Einsätze, Ausbildung, Fahrzeuge, Termine und Mitgliederportal.'],
+            ['@type' => 'SoftwareApplication', 'name' => 'FeuerwehrManagementSystem', 'applicationCategory' => 'BusinessApplication', 'operatingSystem' => 'Web', 'url' => $seiteUrl . '/', 'logo' => $seiteUrl . '/assets/fms-logo.png', 'description' => 'Software für Feuerwehren: Mitgliederverwaltung, Einsätze, Ausbildung, Fahrzeuge, Termine, Mitgliederportal und Single Sign-On für eigene Apps.'],
         ],
     ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP) ?></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" rel="stylesheet">
@@ -303,6 +303,7 @@ $seiteUrl = rtrim((string)FMS_HOMEPAGE_URL, '/');
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon amber"><i class="bi bi-cup-hot-fill"></i></span><h3>Getränke &amp; Abrechnung</h3><p>Getränkebestände organisieren und Ausgaben sowie Abrechnungen übersichtlich führen.</p></article></div>
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon green"><i class="bi bi-phone-fill"></i></span><h3>Mitgliederportal</h3><p>Mitglieder können wichtige Informationen und persönliche Funktionen auch mobil selbst erreichen.</p></article></div>
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon blue"><i class="bi bi-cloud-arrow-up-fill"></i></span><h3>Push-API für Ihre Homepage</h3><p>Aktuelle Termine, Einsätze und Neuigkeiten per Push-Schnittstelle automatisch auf der Website Ihrer Feuerwehr veröffentlichen.</p></article></div>
+            <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon red"><i class="bi bi-box-arrow-in-right"></i></span><h3>Single Sign-On für eigene Apps</h3><p>Eigene Anwendungen lassen sich per SSO anbinden – die Anmeldung erfolgt zentral über das Mitgliederportal, ein Login für alles.</p></article></div>
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon dark"><i class="bi bi-shield-lock-fill"></i></span><h3>Zwei-Faktor-Authentifizierung</h3><p>Zusätzlicher Schutz der Benutzerkonten durch 2FA – damit sensible Mitglieder- und Einsatzdaten sicher bleiben.</p></article></div>
             <div class="col-md-6 col-lg-4"><article class="feature-card"><span class="feature-icon amber"><i class="bi bi-puzzle-fill"></i></span><h3>Kundenspezifische Implementierungen</h3><p>Individuelle Lösungen, zum Beispiel für die Anwesenheitsdokumentation, sind auf Anfrage möglich.</p></article></div>
         </div>
